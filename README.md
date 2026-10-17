@@ -1,23 +1,28 @@
 # THE ARNOLD CHRONICLE (阿诺德技术纪事)
 
-一份结合 **复古报纸排版美学 (Vintage Newsprint & Editorial Broadsheet Design)** 与 **现代工程语言风格** 的个人技术主页网站。
+Arnold (李东启) 的数字化个人技术纪事与主页。融合 **复古报刊排版美学 (Vintage Newsprint & Editorial Broadsheet Design)** 与 **现代工程语言风格**，聚焦数据科学、AI 全栈工程、量化交易与理论物理探索。
 
 在线访问：[https://arnold3395.github.io/](https://arnold3395.github.io/)
 
 ---
 
-## 🗞️ 核心特色与设计系统
+## 🗞️ 核心板块与设计体系
 
-- **现代专业语言风格 (Modern Editorial Phrasing)**：
-  - 摒弃戏谑与晦涩文风，采用清晰、克制、专业的现代软件工程师文案风格。
-  - 涵盖个人技术特写、精选工程项目、核心技术栈架构与开放交流通道。
+- **真实聚焦的专业定位 (Professional Positioning)**：
+  - **学术渊源**：南开大学社会心理学学士、中国科学院大学（中科院心理所）硕士，跨越认知行为决策、复杂系统、现代数理计算与全栈系统工程。
+  - **状态标示**：常驻北京，在职探索，积极寻求 AI 领域与量化交易领域前沿机会。
+  - **核心信条**：*Know Thyself*（认识你自己）。
 - **经典报业版式体系 (Newspaper Editorial Layout)**：
-  - **报头与报耳 (Masthead & Ears)**：醒目衬线大报头、状态标识与复古印章式双语切换器。
-  - **通栏副线 (Double-rule Dateline Strip)**：年度特刊标线、城市版别与发刊信息。
-  - **头版特写 (Front-Page Lead Story)**：双栏正文排版，搭配首字下沉（Drop Cap）与工程理念侧栏。
-  - **精选项目 (Featured Projects)**：多栏卡片网格，展示现代排版引擎、AI 智能体系统与开发者工具。
-  - **专业能力矩阵 (Core Skills)**：经典虚线框布局，清晰呈现前端架构、系统工程与 AI 落地能力。
-  - **联络交流 (Get in Touch)**：即时通联卡片，支持 GitHub 快速访问。
+  - **报头与报耳 (Masthead & Ears)**：醒目衬线大报头、状态指示与复古印章式双语切换器。
+  - **通栏副线 (Double-rule Dateline Strip)**：年度特刊标线、城市版别与发刊信息（中国 · 北京）。
+  - **头版特写 (Front-Page Lead Story)**：双栏正文排版，搭配首字下沉（Drop Cap）、学术渊源（南开 & 中科院）与技术信条侧栏。
+  - **核心研发规划 (Core Research & Roadmap)**：
+    1. 个人量化交易策略研究系统的开发
+    2. 量化交易研究中保证方法正确性的 SKILL 套件（防过拟合与数据偏差防御）
+    3. 零知识自演化 AI 智能体体系
+  - **研读典籍专栏 (Curated Literature & Readings)**：收录金融机器学习（Prado）、理论物理（Susskind）与认知决策（Kahneman）权威经典。
+  - **专业能力矩阵 (Core Skills)**：分类广告排版，涵盖数据科学、AI 全栈与量化数理素养。
+  - **联络交流 (Get in Touch)**：支持直接发送邮件（`seagle3173@outlook.com`）与访问 GitHub 主页。
 - **纯正报纸质感 (Aged Paper Craftsmanship)**：
   - 暖色调纸张质感、边缘暗角光晕与微妙纸纤维颗粒。
   - 高对比度墨水排印层次，保证极高可读性与出版物级视觉秩序。
@@ -42,4 +47,4 @@
 
 ---
 
-© 2026 Arnold (Dongqi Li). All Rights Reserved. Built with classic editorial design & modern web engineering.
+© 2026 Arnold (Dongqi Li). All Rights Reserved. Built with classic editorial design & modern engineering.
