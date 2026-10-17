@@ -1,150 +1,192 @@
 /**
- * 2026 Apple Liquid Glass Portfolio
- * Arnold (Dongqi Li) Personal Homepage
- * Features: Bilingual i18n Switcher, Dynamic Specular Light, Smooth Navigation
+ * THE ARNOLD CHRONICLE - Vintage Aged Newspaper
+ * Arnold (Dongqi Li) Personal Gazette
+ * Bilingual Dictionary & Newspaper Interactivity
  */
 
-// Bilingual Translation Dictionary
-const i18nData = {
+const newspaperI18n = {
   zh: {
-    // Nav
-    "nav.about": "关于我",
-    "nav.projects": "精选项目",
-    "nav.skills": "技能架构",
-    "nav.contact": "联系方式",
+    // Masthead & Ears
+    "masthead.title": "THE ARNOLD CHRONICLE",
+    "masthead.chinese": "阿诺德纪事报",
+    "masthead.motto": "“追求极致之数字工程，熔炼工程与美学之典范”",
+    "ear.tagline": "每日特刊 · 创刊于甲辰年",
+    "ear.weather": "气象报告：代码晴好，微风拂于数字之海",
+    "ear.price": "定价：一颗求知之心",
+    "lang.label": "语言版本 / EDITION",
 
-    // Hero
-    "hero.badge": "探索数字美学与前沿技术",
-    "hero.title": "你好，我是 <span class=\"highlight-gradient\">Arnold (李东启)</span>",
-    "hero.subtitle": "致力于构建融合极致视觉美学、流畅交互设计与可靠系统架构的现代数字化体验。",
-    "hero.cta.projects": "探索精选作品",
-    "hero.cta.contact": "即刻沟通",
+    // Issue Strip
+    "strip.vol": "第 26 卷 · 第 10 期",
+    "strip.edition": "今日特刊 · 晚间城市版",
+    "strip.location": "发刊地：深圳 / 赛博空间",
+    "strip.circulation": "定价：免费公开阅览",
 
-    // About Section
-    "about.tag": "Vision & Mindset",
-    "about.heading": "设计美学与工程思维的深度交汇",
-    "about.bio.title": "跨领域创造者",
-    "about.bio.desc": "追求如苹果硬件般温润而纯粹的数字体验。专注探索现代化前端工程、交互系统设计以及人工智能技术的落地应用，将复杂的底层逻辑凝练为简单而自然的交互形式。",
-    "about.stats.experience": "技术沉淀",
-    "about.stats.exp_val": "多年积累",
-    "about.stats.focus": "核心追求",
-    "about.stats.focus_val": "极致体验",
-    "about.stats.curiosity": "持续探索",
-    "about.stats.curiosity_val": "保持好奇",
+    // Depts Nav
+    "nav.lead": "导读特稿",
+    "nav.projects": "工程发明",
+    "nav.skills": "技能启事",
+    "nav.contact": "电报通联",
 
-    "about.philosophy.title": "设计哲学",
-    "about.philosophy.desc": "克制、明晰与通透。如同 2026 年的 Liquid Glass 设计理念，界面不应成为用户与信息之间的阻隔，而应是流动的灵感载体。",
+    // Lead Story
+    "lead.kicker": "【头条专电】头版特稿",
+    "lead.headline": "特写：工程师 Arnold 融汇代码逻辑与典雅美学",
+    "lead.subhead": "探寻数字时代的手艺人精神——以严谨之架构，锻造流畅温润之交互体验",
+    "lead.byline": "本报首席特派记者 报道于赛博空间",
+    "lead.p1": "<span class=\"drop-cap\">追</span>求如实体工造般质朴而纯粹的数字体验。Arnold（李东启）专注于现代化前端工程、交互系统设计与前沿智能技术的深度探索，致力于将纷繁复杂的底层系统逻辑，凝练为自然、克制且富有生命力的交互表达。",
+    "lead.p2": "在当今信息浪潮席卷的世界里，不仅追求代码的稳固与高效，更将每一行逻辑视作排印于黄旧纸页上的精密铅字。从微交互细节到全栈系统链路，以持久的专注打磨每一个工程切面。",
+
+    // Side Box
+    "editorial.title": "主笔社论 · 哲学视界",
+    "editorial.content": "“克制、明晰、经得起时间洗练。真正的设计不应在用户与信息之间构筑隔阂，而应如百年前墨印新闻纸一般，即便岁月流转、泛黄作旧，其字里行间的力量与秩序依然清晰可见。”",
+    "editorial.stamp": "★ 经本报核准 ★",
 
     // Projects Section
-    "projects.tag": "Selected Works",
-    "projects.heading": "探索与工程实践",
-    "project.1.category": "Web Architecture & Design",
-    "project.1.title": "下一代毛玻璃设计系统",
-    "project.1.desc": "探索多层折射、动态流光与硬件加速渲染的 Web 前端设计模式，提供极富沉浸感的微交互体验。",
-    "project.2.category": "Intelligent Systems",
-    "project.2.title": "AI 与自主代理工作流",
-    "project.2.desc": "结合大语言模型与多代理协作机制，构建高效的自动化任务处理管线与智能助手应用。",
-    "project.3.category": "Creative Tools",
-    "project.3.title": "极简数字生产力工具",
-    "project.3.desc": "以用户为中心的高性能小工具集，专注消除干扰，提升思维流转与开发协作效率。",
+    "projects.banner": "工程实践与发明实录",
+    "p1.tag": "专电 · 视觉交互工程",
+    "p1.title": "复古作旧与现代排版系统",
+    "p1.desc": "探索印刷品美学在现代 Web 平台上的数字复兴，融合报纸多栏栅格、复古铅字排印与响应式流动排版，打造有呼吸感的新闻纸质感体验。",
+    "p1.meta": "通报编号：DS-01",
 
-    // Skills Section
-    "skills.tag": "Capabilities & Stack",
-    "skills.heading": "技术栈与能力矩阵",
-    "skills.frontend.title": "前端交互与架构",
-    "skills.frontend.desc": "深入理解 Web 标准、现代 CSS 特性、响应式架构与组件化模式。",
-    "skills.systems.title": "系统开发与工具链",
-    "skills.systems.desc": "熟练掌握现代软件工程规范、Git 协同流、全栈开发与环境容器化。",
-    "skills.ai.title": "AI 探索与创新应用",
-    "skills.ai.desc": "关注 LLM Agent 编排、Prompt 工程及智能开发辅助体系。",
+    "p2.tag": "特讯 · 自主智能系统",
+    "p2.title": "AI 与自主代理工作流编排",
+    "p2.desc": "结合大语言模型与多代理协作机制，构建高效可靠的自动化任务管线，探索人机协同之全新生产力疆界与自主决策体系。",
+    "p2.meta": "特讯编号：AI-02",
 
-    // Contact Section
-    "contact.tag": "Get In Touch",
-    "contact.heading": "建立连接，共创未来",
-    "contact.desc": "无论是项目合作、技术探讨，还是探索数字创新的新想法，随时欢迎交流。",
-    "contact.btn.email": "发送邮件",
-    "contact.btn.github": "GitHub 个人主页",
+    "p3.tag": "通报 · 极简数字工具",
+    "p3.title": "匠心打造之数字生产力套件",
+    "p3.desc": "摒弃冗余繁复，以极致的性能与清爽的使用感受，消除操作阻隔，助力思维流转与日常工程协作的高效推进。",
+    "p3.meta": "启事编号：UT-03",
 
-    // Footer
-    "footer.rights": "保留所有权利。"
+    // Classifieds
+    "classifieds.title": "分类启事与技能名录",
+    "ad1.title": "【启事】前端交互与现代架构",
+    "ad1.body": "精研 Web 现代标准，熟谙视觉交互体系与响应式工程规范，力求毫秒级响应与优雅排版：",
+    "ad1.item1": "现代 HTML5 与语义化排印架构",
+    "ad1.item2": "高级 CSS 架构与视觉复刻工程",
+    "ad1.item3": "JavaScript (ESNext) 模块与交互状态",
+    "ad1.item4": "跨端多屏自适应排版工程",
+
+    "ad2.title": "【通告】系统工程与协同规范",
+    "ad2.body": "遵循严谨软件工程规范，掌握现代协作工具流与持续交付体系，保障架构之稳固长青：",
+    "ad2.item1": "Git 协同流水线与版本追溯",
+    "ad2.item2": "RESTful 接口契约与数据集成",
+    "ad2.item3": "Linux 环境运作与 Shell 自动化",
+    "ad2.item4": "DevOps 敏捷交付与自动化工作流",
+
+    "ad3.title": "【招贴】智能探索与前沿应用",
+    "ad3.body": "持续跟踪人工智能与自主智能体前沿进展，将前瞻科技切实落地于解决现实复杂问题：",
+    "ad3.item1": "LLM 智能体编排与工作流协调",
+    "ad3.item2": "Prompt 架构工程与精准意图解析",
+    "ad3.item3": "AI 辅助工程化与智能化流水线",
+
+    // Telegram / Contact
+    "telegram.title": "电报通信处 · 欢迎投递",
+    "telegram.desc": "阁下如有项目合作之意向、技术工程之探讨，或愿就数字创新交换见解，本报通信处随时恭候您的来函与电报联络。",
+    "telegram.btn.github": "查阅 GITHUB 档案库",
+
+    // Colophon
+    "colophon.imprint": "本纪事报由 Arnold (李东启) 监制并排印发行 · 深圳 · 赛博空间",
+    "colophon.rights": "保留所有权利 · 基于经典新闻报纸排印美学构建"
   },
+
   en: {
-    // Nav
-    "nav.about": "About",
-    "nav.projects": "Projects",
-    "nav.skills": "Skills",
-    "nav.contact": "Contact",
+    // Masthead & Ears
+    "masthead.title": "THE ARNOLD CHRONICLE",
+    "masthead.chinese": "阿诺德纪事报",
+    "masthead.motto": "\"Dedicated to Digital Engineering, Craftsmanship & Enduring Aesthetics\"",
+    "ear.tagline": "EST. IN CYBERSPACE · DAILY EDITION",
+    "ear.weather": "WEATHER: FAIR SKIES OVER THE DIGITAL OCEAN",
+    "ear.price": "PRICE: ONE CURIOSITY",
+    "lang.label": "EDITION / 语言",
 
-    // Hero
-    "hero.badge": "Exploring Digital Aesthetics & Modern Tech",
-    "hero.title": "Hello, I am <span class=\"highlight-gradient\">Arnold (Dongqi Li)</span>",
-    "hero.subtitle": "Dedicated to crafting modern digital experiences blending refined visual aesthetics, fluid interactions, and robust system architecture.",
-    "hero.cta.projects": "Explore Projects",
-    "hero.cta.contact": "Get in Touch",
+    // Issue Strip
+    "strip.vol": "VOL. XXVI · NO. 10",
+    "strip.edition": "SPECIAL DISPATCH · LATE CITY EDITION",
+    "strip.location": "PUBLISHED AT: SHENZHEN / CYBERSPACE",
+    "strip.circulation": "CIRCULATION: GRATIS & PUBLIC",
 
-    // About Section
-    "about.tag": "Vision & Mindset",
-    "about.heading": "Where Engineering Precision Meets Design Aesthetics",
-    "about.bio.title": "Interdisciplinary Creator",
-    "about.bio.desc": "Striving for digital experiences as pure and seamless as crafted hardware. Focusing on modern web engineering, interaction design, and real-world AI applications—distilling complex logic into effortless interactions.",
-    "about.stats.experience": "Experience",
-    "about.stats.exp_val": "Continuous",
-    "about.stats.focus": "Core Principle",
-    "about.stats.focus_val": "Pure Delight",
-    "about.stats.curiosity": "Evolution",
-    "about.stats.curiosity_val": "Ever Curious",
+    // Depts Nav
+    "nav.lead": "LEAD STORY",
+    "nav.projects": "INVENTIONS",
+    "nav.skills": "CLASSIFIEDS",
+    "nav.contact": "TELEGRAPH",
 
-    "about.philosophy.title": "Design Philosophy",
-    "about.philosophy.desc": "Restraint, clarity, and translucency. Echoing the 2026 Liquid Glass paradigm, an interface should never block content, but rather act as a fluid lens for thought.",
+    // Lead Story
+    "lead.kicker": "SPECIAL DISPATCH · FRONT PAGE LEAD",
+    "lead.headline": "EXTRA! ENGINEER ARNOLD CONVERGES CODE & TIMELESS AESTHETICS",
+    "lead.subhead": "An inquiry into digital craftsmanship—forging fluid, humane experiences through rigorous system engineering",
+    "lead.byline": "BY OUR SPECIAL CORRESPONDENT IN CYBERSPACE",
+    "lead.p1": "<span class=\"drop-cap\">S</span>triving for digital experiences as tangible, grounded, and pure as fine printcraft. Arnold (Dongqi Li) focuses on modern web engineering, interaction architecture, and applied artificial intelligence, distilling intricate system logic into quiet, purposeful experiences.",
+    "lead.p2": "In an era of relentless noise, every block of logic is approached as a typeset character placed upon the page. From micro-interactions to resilient full-stack systems, each detail is honed with patience and discipline.",
+
+    // Side Box
+    "editorial.title": "EDITORIAL OPINION",
+    "editorial.content": "\"Restraint, clarity, and resilience against time. True design never stands between the reader and the idea; it serves as a truthful lens—much like century-old newsprint whose clarity remains undiminished by the patina of age.\"",
+    "editorial.stamp": "★ OFFICIALLY VERIFIED ★",
 
     // Projects Section
-    "projects.tag": "Selected Works",
-    "projects.heading": "Explorations & Engineering",
-    "project.1.category": "Web Architecture & Design",
-    "project.1.title": "Next-Gen Glassmorphic Design System",
-    "project.1.desc": "Exploring multi-layered refraction, specular reflections, and hardware-accelerated Web patterns for immersive micro-interactions.",
-    "project.2.category": "Intelligent Systems",
-    "project.2.title": "AI & Autonomous Agent Workflows",
-    "project.2.desc": "Harnessing LLMs and multi-agent coordination frameworks to architect efficient task automation pipelines.",
-    "project.3.category": "Creative Tools",
-    "project.3.title": "Minimalist Productivity Tools",
-    "project.3.desc": "Human-centric utilities designed to eliminate friction and elevate developer flow and creative focus.",
+    "projects.banner": "DISPATCHES & INVENTIONS",
+    "p1.tag": "DISPATCH · VISUAL ARCHITECTURE",
+    "p1.title": "Vintage Print Typography Engine",
+    "p1.desc": "Exploring the revival of classic editorial design on the web, uniting multi-column newsprint grids with modern responsive fluid typography.",
+    "p1.meta": "DISPATCH NO. DS-01",
 
-    // Skills Section
-    "skills.tag": "Capabilities & Stack",
-    "skills.heading": "Technical Capabilities",
-    "skills.frontend.title": "Frontend & Interaction",
-    "skills.frontend.desc": "Deep proficiency in modern Web standards, advanced CSS architectures, and responsive components.",
-    "skills.systems.title": "Systems & Tooling",
-    "skills.systems.desc": "Well-versed in software engineering best practices, Git workflows, and full-stack environments.",
-    "skills.ai.title": "AI Exploration",
-    "skills.ai.desc": "Active practitioner in LLM agent orchestration, prompt architecture, and AI-assisted engineering.",
+    "p2.tag": "SPECIAL WIRE · INTELLIGENT SYSTEMS",
+    "p2.title": "AI & Autonomous Agent Workflows",
+    "p2.desc": "Synthesizing large language models and multi-agent coordination frameworks to construct resilient, autonomous task automation pipelines.",
+    "p2.meta": "DISPATCH NO. AI-02",
 
-    // Contact Section
-    "contact.tag": "Get In Touch",
-    "contact.heading": "Let's Connect & Create",
-    "contact.desc": "Whether you want to discuss a collaboration, technical ideas, or future innovations, I'd love to hear from you.",
-    "contact.btn.email": "Send Email",
-    "contact.btn.github": "GitHub Profile",
+    "p3.tag": "NOTICE · CRAFTED UTILITIES",
+    "p3.title": "Minimalist Productivity Instruments",
+    "p3.desc": "Discarding superfluous excess to forge sharp, high-speed utilities dedicated to cultivating creative flow and engineering momentum.",
+    "p3.meta": "NOTICE NO. UT-03",
 
-    // Footer
-    "footer.rights": "All rights reserved."
+    // Classifieds
+    "classifieds.title": "THE CLASSIFIED NOTICES & CAPABILITIES",
+    "ad1.title": "WANTED: ELEGANT FRONTEND",
+    "ad1.body": "Deep mastery of modern Web standards, responsive layout engineering, and respectful user micro-interactions:",
+    "ad1.item1": "Semantic HTML5 & Print Typography Layouts",
+    "ad1.item2": "Advanced CSS Grid & Visual Systems",
+    "ad1.item3": "JavaScript (ESNext) State Architecture",
+    "ad1.item4": "Cross-Platform Responsive Engineering",
+
+    "ad2.title": "GUARANTEED: SOUND SYSTEMS",
+    "ad2.body": "Committed to rigorous engineering practices, structured collaborative workflows, and sustainable architecture:",
+    "ad2.item1": "Git Version Control & Revision Tracing",
+    "ad2.item2": "RESTful API Integration & Protocols",
+    "ad2.item3": "Linux Systems & Shell Automation",
+    "ad2.item4": "DevOps & Continuous Delivery Pipelines",
+
+    "ad3.title": "NOTICE: ARTIFICIAL INTELLIGENCE",
+    "ad3.body": "Active explorer in frontier artificial intelligence, applying autonomous agents to solve real-world complexities:",
+    "ad3.item1": "Agentic Frameworks & Coordination",
+    "ad3.item2": "Prompt Architecture & Intent Parsing",
+    "ad3.item3": "AI-Augmented Engineering Pipelines",
+
+    // Telegram / Contact
+    "telegram.title": "THE TELEGRAPH DESK · INQUIRIES",
+    "telegram.desc": "Should you wish to initiate a collaboration, debate technical doctrines, or share visions of digital enterprise, the dispatch wire stands open.",
+    "telegram.btn.github": "INSPECT GITHUB ARCHIVES",
+
+    // Colophon
+    "colophon.imprint": "Typeset & Published by Arnold (Dongqi Li) · Shenzhen · Cyberspace",
+    "colophon.rights": "All Rights Reserved · Printed with Classic Editorial Spirit"
   }
 };
 
-// State Management
-let currentLang = localStorage.getItem("arnold_site_lang") || "zh";
+// Current active language (saved in localStorage)
+let activeLanguage = localStorage.getItem("arnold_newspaper_lang") || "zh";
 
 /**
- * Apply Language to DOM
+ * Apply Language across DOM
  */
-function setLanguage(lang) {
-  if (!i18nData[lang]) return;
-  currentLang = lang;
-  localStorage.setItem("arnold_site_lang", lang);
+function applyLanguage(lang) {
+  if (!newspaperI18n[lang]) return;
+  activeLanguage = lang;
+  localStorage.setItem("arnold_newspaper_lang", lang);
 
-  // Update Buttons
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
+  // Update Toggle Button States
+  document.querySelectorAll(".lang-toggle-btn").forEach((btn) => {
     if (btn.dataset.lang === lang) {
       btn.classList.add("active");
     } else {
@@ -152,67 +194,52 @@ function setLanguage(lang) {
     }
   });
 
-  // Update Text Elements
+  // Update standard text nodes
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (i18nData[lang][key]) {
-      el.textContent = i18nData[lang][key];
+    if (newspaperI18n[lang][key] !== undefined) {
+      el.textContent = newspaperI18n[lang][key];
     }
   });
 
-  // Update HTML-supported Elements
+  // Update HTML-supported nodes (e.g. drop caps, quotes)
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.getAttribute("data-i18n-html");
-    if (i18nData[lang][key]) {
-      el.innerHTML = i18nData[lang][key];
+    if (newspaperI18n[lang][key] !== undefined) {
+      el.innerHTML = newspaperI18n[lang][key];
     }
   });
 
-  // Update Document title & html lang attribute
+  // Update Document Meta
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
   document.title = lang === "zh"
-    ? "Arnold (李东启) | 个人主页 - 2026 Apple 风格"
-    : "Arnold (Dongqi Li) | Personal Homepage";
+    ? "THE ARNOLD CHRONICLE | 阿诺德纪事报 - 个人主页"
+    : "THE ARNOLD CHRONICLE | Personal Gazette of Arnold";
 }
 
 /**
- * Setup Specular Highlight Effect on Glass Cards
- */
-function initGlassCardsEffect() {
-  const cards = document.querySelectorAll(".glass-card");
-
-  cards.forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    });
-  });
-}
-
-/**
- * Initialize Everything on DOMContentLoaded
+ * Initialize on Page Load
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Init Language
-  setLanguage(currentLang);
+  // Apply saved or default language
+  applyLanguage(activeLanguage);
 
-  // Bind Language Switcher Buttons
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
+  // Bind Switcher Buttons
+  document.querySelectorAll(".lang-toggle-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const selectedLang = btn.dataset.lang;
-      setLanguage(selectedLang);
+      const targetLang = btn.dataset.lang;
+      applyLanguage(targetLang);
     });
   });
 
-  // Init Specular Light
-  initGlassCardsEffect();
-
-  // Dynamic Year in Footer
-  const yearEl = document.getElementById("current-year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  // Add subtle sound/animation feel on stamp or headline hover
+  const stamps = document.querySelectorAll(".rubber-stamp");
+  stamps.forEach((stamp) => {
+    stamp.addEventListener("mouseenter", () => {
+      stamp.style.transform = `rotate(${Math.random() * 6 - 3}deg) scale(1.05)`;
+    });
+    stamp.addEventListener("mouseleave", () => {
+      stamp.style.transform = "rotate(-4deg) scale(1)";
+    });
+  });
 });

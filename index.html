@@ -3,309 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arnold (李东启) | 个人主页</title>
-  <meta name="description" content="Arnold (李东启) 个人主页 - 2026 苹果 Liquid Glass 毛玻璃设计风格">
+  <title>THE ARNOLD CHRONICLE | 阿诺德纪事报</title>
+  <meta name="description" content="THE ARNOLD CHRONICLE - Arnold (李东启) 个人纪事报，复古作旧报纸排印风格">
+
+  <!-- Google Fonts: Vintage Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Serif+SC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Ambient Fluid Lighting Background -->
-  <div class="ambient-lighting">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
-  </div>
+  <!-- Paper Vignette & Fiber Overlay -->
+  <div class="paper-overlay"></div>
 
-  <!-- Subtle Depth Grid -->
-  <div class="grid-overlay"></div>
+  <!-- Main Broadsheet Paper Sheet -->
+  <div class="newspaper-sheet">
 
-  <!-- Floating Island Navigation Bar -->
-  <div class="header-wrapper">
-    <nav class="navbar-glass">
-      <a href="#" class="logo-brand">
-        <div class="logo-icon">A</div>
-        <span>Arnold</span>
-      </a>
+    <!-- Newspaper Header Section -->
+    <header class="newspaper-header">
+      <!-- Top "Ears" (报耳) -->
+      <div class="header-ears">
+        <div class="ear-left">
+          <span class="ear-tagline" data-i18n="ear.tagline">每日特刊 · 创刊于甲辰年</span>
+          <span data-i18n="ear.weather">气象报告：代码晴好，微风拂于数字之海</span>
+          <span data-i18n="ear.price">定价：一颗求知之心</span>
+        </div>
 
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link" data-i18n="nav.about">关于我</a></li>
-        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">精选项目</a></li>
-        <li><a href="#skills" class="nav-link" data-i18n="nav.skills">技能架构</a></li>
-        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">联系方式</a></li>
-      </ul>
-
-      <!-- Top Right Actions: Language Switcher -->
-      <div class="nav-actions">
-        <div class="lang-switcher" title="Switch Language / 切换语言">
-          <button class="lang-btn active" data-lang="zh">中</button>
-          <button class="lang-btn" data-lang="en">EN</button>
+        <!-- Right Ear: Bilingual Switcher Stamp -->
+        <div class="ear-right">
+          <div class="lang-stamp-box">
+            <span class="lang-label" data-i18n="lang.label">语言版本 / EDITION</span>
+            <button class="lang-toggle-btn active" data-lang="zh">中</button>
+            <button class="lang-toggle-btn" data-lang="en">EN</button>
+          </div>
         </div>
       </div>
-    </nav>
-  </div>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-pill-badge">
-          <span class="badge-glow-dot"></span>
-          <span data-i18n="hero.badge">探索数字美学与前沿技术</span>
+      <!-- Main Masthead (报头) -->
+      <div class="masthead-wrapper">
+        <h1 class="masthead-title" data-i18n="masthead.title">THE ARNOLD CHRONICLE</h1>
+        <span class="masthead-chinese" data-i18n="masthead.chinese">阿诺德纪事报</span>
+
+        <div class="vintage-ornament">
+          <span class="ornament-symbol">✦ &nbsp; ⚜ &nbsp; ✦</span>
         </div>
 
-        <h1 class="hero-title" data-i18n-html="hero.title">
-          你好，我是 <span class="highlight-gradient">Arnold (李东启)</span>
-        </h1>
+        <p class="masthead-motto" data-i18n="masthead.motto">“追求极致之数字工程，熔炼工程与美学之典范”</p>
+      </div>
 
-        <p class="hero-subtitle" data-i18n="hero.subtitle">
-          致力于构建融合极致视觉美学、流畅交互设计与可靠系统架构的现代数字化体验。
+      <!-- Dateline Strip (通栏副线) -->
+      <div class="issue-dateline-strip">
+        <span class="strip-item" data-i18n="strip.vol">第 26 卷 · 第 10 期</span>
+        <span class="strip-item" data-i18n="strip.edition">今日特刊 · 晚间城市版</span>
+        <span class="strip-item" data-i18n="strip.location">发刊地：深圳 / 赛博空间</span>
+        <span class="strip-item" data-i18n="strip.circulation">定价：免费公开阅览</span>
+      </div>
+
+      <!-- Department Index Navigation -->
+      <nav class="newspaper-dept-nav">
+        <a href="#lead" class="dept-link" data-i18n="nav.lead">导读特稿</a>
+        <a href="#inventions" class="dept-link" data-i18n="nav.projects">工程发明</a>
+        <a href="#classifieds" class="dept-link" data-i18n="nav.skills">技能启事</a>
+        <a href="#telegram" class="dept-link" data-i18n="nav.contact">电报通联</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Front Page Lead Article (头版特写) -->
+      <article id="lead" class="front-page-lead">
+        <span class="lead-kicker" data-i18n="lead.kicker">【头条专电】头版特稿</span>
+        <h2 class="headline-main" data-i18n="lead.headline">特写：工程师 Arnold 融汇代码逻辑与典雅美学</h2>
+        <p class="lead-subheadline" data-i18n="lead.subhead">
+          探寻数字时代的手艺人精神——以严谨之架构，锻造流畅温润之交互体验
         </p>
 
-        <div class="hero-cta-group">
-          <a href="#projects" class="glass-btn btn-primary-glass">
-            <span data-i18n="hero.cta.projects">探索精选作品</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#contact" class="glass-btn btn-secondary-glass">
-            <span data-i18n="hero.cta.contact">即刻沟通</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section (Bento Grid) -->
-    <section id="about" class="section-wrapper">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="about.tag">Vision & Mindset</span>
-          <h2 class="section-heading" data-i18n="about.heading">设计美学与工程思维的深度交汇</h2>
+        <div class="lead-byline-bar">
+          <span data-i18n="lead.byline">本报首席特派记者 报道于赛博空间</span>
+          <span>EST. AUTUMN 2026</span>
         </div>
 
-        <div class="bento-grid">
-          <!-- Main Bio Card -->
-          <div class="glass-card col-span-8">
-            <div class="bento-content">
-              <div class="card-icon-badge">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
-              <h3 class="card-title" data-i18n="about.bio.title">跨领域创造者</h3>
-              <p class="card-desc" data-i18n="about.bio.desc">
-                追求如苹果硬件般温润而纯粹的数字体验。专注探索现代化前端工程、交互系统设计以及人工智能技术的落地应用，将复杂的底层逻辑凝练为简单而自然的交互形式。
-              </p>
-              <div class="stats-row">
-                <div class="stat-pill">
-                  <div class="stat-number" data-i18n="about.stats.exp_val">多年积累</div>
-                  <div class="stat-label" data-i18n="about.stats.experience">技术沉淀</div>
-                </div>
-                <div class="stat-pill">
-                  <div class="stat-number" data-i18n="about.stats.focus_val">极致体验</div>
-                  <div class="stat-label" data-i18n="about.stats.focus">核心追求</div>
-                </div>
-                <div class="stat-pill">
-                  <div class="stat-number" data-i18n="about.stats.curiosity_val">保持好奇</div>
-                  <div class="stat-label" data-i18n="about.stats.curiosity">持续探索</div>
-                </div>
-              </div>
-            </div>
+        <div class="newspaper-columns-3">
+          <!-- Main Editorial Body (Two columns with Drop Cap) -->
+          <div class="lead-article-body">
+            <p data-i18n-html="lead.p1">
+              <span class="drop-cap">追</span>求如实体工造般质朴而纯粹的数字体验。Arnold（李东启）专注于现代化前端工程、交互系统设计与前沿智能技术的深度探索，致力于将纷繁复杂的底层系统逻辑，凝练为自然、克制且富有生命力的交互表达。
+            </p>
+            <p data-i18n-html="lead.p2">
+              在当今信息浪潮席卷的世界里，不仅追求代码的稳固与高效，更将每一行逻辑视作排印于黄旧纸页上的精密铅字。从微交互细节到全栈系统链路，以持久的专注打磨每一个工程切面。
+            </p>
           </div>
 
-          <!-- Philosophy Card -->
-          <div class="glass-card col-span-4">
-            <div class="bento-content">
-              <div class="card-icon-badge">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-              </div>
-              <h3 class="card-title" data-i18n="about.philosophy.title">设计哲学</h3>
-              <p class="card-desc" data-i18n="about.philosophy.desc">
-                克制、明晰与通透。如同 2026 年的 Liquid Glass 设计理念，界面不应成为用户与信息之间的阻隔，而应是流动的灵感载体。
+          <!-- Side Editorial Box (社论哲思框) -->
+          <aside class="lead-side-box">
+            <div class="vintage-box-frame">
+              <h3 class="box-title" data-i18n="editorial.title">主笔社论 · 哲学视界</h3>
+              <p class="box-text" data-i18n="editorial.content">
+                “克制、明晰、经得起时间洗练。真正的设计不应在用户与信息之间构筑隔阂，而应如百年前墨印新闻纸一般，即便岁月流转、泛黄作旧，其字里行间的力量与秩序依然清晰可见。”
               </p>
             </div>
-          </div>
+            <div class="rubber-stamp stamp-red" data-i18n="editorial.stamp">
+              ★ 经本报核准 ★
+            </div>
+          </aside>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-wrapper">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="projects.tag">Selected Works</span>
-          <h2 class="section-heading" data-i18n="projects.heading">探索与工程实践</h2>
+      <!-- Section: Dispatches & Inventions (工程实践与发明实录) -->
+      <section id="inventions" class="section-broadsheet">
+        <h2 class="section-banner-title" data-i18n="projects.banner">工程实践与发明实录</h2>
+
+        <div class="projects-broadsheet-grid">
+          <!-- Dispatch 1 -->
+          <article class="project-dispatch-item">
+            <span class="dispatch-tag" data-i18n="p1.tag">专电 · 视觉交互工程</span>
+            <h3 class="dispatch-title" data-i18n="p1.title">复古作旧与现代排版系统</h3>
+            <p class="dispatch-snippet" data-i18n="p1.desc">
+              探索印刷品美学在现代 Web 平台上的数字复兴，融合报纸多栏栅格、复古铅字排印与响应式流动排版，打造有呼吸感的新闻纸质感体验。
+            </p>
+            <div class="dispatch-tag-list">
+              <span class="vintage-tag-pill">Newsprint Grid</span>
+              <span class="vintage-tag-pill">Typography</span>
+              <span class="vintage-tag-pill">CSS Next</span>
+            </div>
+            <div class="dispatch-footer-meta">
+              <span data-i18n="p1.meta">通报编号：DS-01</span>
+              <span>READ DISPATCH ☞</span>
+            </div>
+          </article>
+
+          <!-- Dispatch 2 -->
+          <article class="project-dispatch-item">
+            <span class="dispatch-tag" data-i18n="p2.tag">特讯 · 自主智能系统</span>
+            <h3 class="dispatch-title" data-i18n="p2.title">AI 与自主代理工作流编排</h3>
+            <p class="dispatch-snippet" data-i18n="p2.desc">
+              结合大语言模型与多代理协作机制，构建高效可靠的自动化任务管线，探索人机协同之全新生产力疆界与自主决策体系。
+            </p>
+            <div class="dispatch-tag-list">
+              <span class="vintage-tag-pill">Agentic Workflows</span>
+              <span class="vintage-tag-pill">LLMs</span>
+              <span class="vintage-tag-pill">Automation</span>
+            </div>
+            <div class="dispatch-footer-meta">
+              <span data-i18n="p2.meta">特讯编号：AI-02</span>
+              <span>READ DISPATCH ☞</span>
+            </div>
+          </article>
+
+          <!-- Dispatch 3 -->
+          <article class="project-dispatch-item">
+            <span class="dispatch-tag" data-i18n="p3.tag">通报 · 极简数字工具</span>
+            <h3 class="dispatch-title" data-i18n="p3.title">匠心打造之数字生产力套件</h3>
+            <p class="dispatch-snippet" data-i18n="p3.desc">
+              摒弃冗余繁复，以极致的性能与清爽的使用感受，消除操作阻隔，助力思维流转与日常工程协作的高效推进。
+            </p>
+            <div class="dispatch-tag-list">
+              <span class="vintage-tag-pill">Productivity</span>
+              <span class="vintage-tag-pill">Minimal UI</span>
+              <span class="vintage-tag-pill">Tooling</span>
+            </div>
+            <div class="dispatch-footer-meta">
+              <span data-i18n="p3.meta">启事编号：UT-03</span>
+              <span>READ DISPATCH ☞</span>
+            </div>
+          </article>
         </div>
+      </section>
 
-        <div class="bento-grid">
-          <!-- Project 1 -->
-          <div class="glass-card col-span-4 project-card">
-            <div class="bento-content">
-              <div class="project-meta">
-                <span class="project-category" data-i18n="project.1.category">Web Architecture & Design</span>
-                <span class="project-link-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"/>
-                    <polyline points="7 7 17 7 17 17"/>
-                  </svg>
-                </span>
-              </div>
-              <h3 class="card-title" data-i18n="project.1.title">下一代毛玻璃设计系统</h3>
-              <p class="card-desc" data-i18n="project.1.desc">
-                探索多层折射、动态流光与硬件加速渲染的 Web 前端设计模式，提供极富沉浸感的微交互体验。
-              </p>
-              <div class="tags-cloud">
-                <span class="glass-tag">CSS3 / Glassmorphism</span>
-                <span class="glass-tag">WebGL Lighting</span>
-                <span class="glass-tag">Fluid UX</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="glass-card col-span-4 project-card">
-            <div class="bento-content">
-              <div class="project-meta">
-                <span class="project-category" data-i18n="project.2.category">Intelligent Systems</span>
-                <span class="project-link-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"/>
-                    <polyline points="7 7 17 7 17 17"/>
-                  </svg>
-                </span>
-              </div>
-              <h3 class="card-title" data-i18n="project.2.title">AI 与自主代理工作流</h3>
-              <p class="card-desc" data-i18n="project.2.desc">
-                结合大语言模型与多代理协作机制，构建高效的自动化任务处理管线与智能助手应用。
-              </p>
-              <div class="tags-cloud">
-                <span class="glass-tag">LLM Orchestration</span>
-                <span class="glass-tag">Agentic AI</span>
-                <span class="glass-tag">Automation</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="glass-card col-span-4 project-card">
-            <div class="bento-content">
-              <div class="project-meta">
-                <span class="project-category" data-i18n="project.3.category">Creative Tools</span>
-                <span class="project-link-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"/>
-                    <polyline points="7 7 17 7 17 17"/>
-                  </svg>
-                </span>
-              </div>
-              <h3 class="card-title" data-i18n="project.3.title">极简数字生产力工具</h3>
-              <p class="card-desc" data-i18n="project.3.desc">
-                以用户为中心的高性能小工具集，专注消除干扰，提升思维流转与开发协作效率。
-              </p>
-              <div class="tags-cloud">
-                <span class="glass-tag">Productivity</span>
-                <span class="glass-tag">Minimal UI</span>
-                <span class="glass-tag">TypeScript</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-wrapper">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="skills.tag">Capabilities & Stack</span>
-          <h2 class="section-heading" data-i18n="skills.heading">技术栈与能力矩阵</h2>
+      <!-- Section: Classifieds (分类启事与技能名录) -->
+      <section id="classifieds" class="classifieds-container">
+        <div class="classifieds-header">
+          <h2 class="classifieds-title" data-i18n="classifieds.title">分类启事与技能名录</h2>
         </div>
 
-        <div class="bento-grid">
-          <div class="glass-card col-span-4">
-            <div class="bento-content">
-              <h3 class="card-title" data-i18n="skills.frontend.title">前端交互与架构</h3>
-              <p class="card-desc" data-i18n="skills.frontend.desc">
-                深入理解 Web 标准、现代 CSS 特性、响应式架构与组件化模式。
-              </p>
-              <div class="tags-cloud">
-                <span class="glass-tag">HTML5 / CSS Next</span>
-                <span class="glass-tag">JavaScript (ESNext)</span>
-                <span class="glass-tag">Responsive Design</span>
-                <span class="glass-tag">UI/UX Micro-interactions</span>
-              </div>
-            </div>
+        <div class="classifieds-grid">
+          <!-- Classified Card 1 -->
+          <div class="classified-ad-card">
+            <h3 class="ad-heading" data-i18n="ad1.title">【启事】前端交互与现代架构</h3>
+            <p class="ad-body" data-i18n="ad1.body">
+              精研 Web 现代标准，熟谙视觉交互体系与响应式工程规范，力求毫秒级响应与优雅排版：
+            </p>
+            <ul class="ad-skills-list">
+              <li data-i18n="ad1.item1">现代 HTML5 与语义化排印架构</li>
+              <li data-i18n="ad1.item2">高级 CSS 架构与视觉复刻工程</li>
+              <li data-i18n="ad1.item3">JavaScript (ESNext) 模块与交互状态</li>
+              <li data-i18n="ad1.item4">跨端多屏自适应排版工程</li>
+            </ul>
           </div>
 
-          <div class="glass-card col-span-4">
-            <div class="bento-content">
-              <h3 class="card-title" data-i18n="skills.systems.title">系统开发与工具链</h3>
-              <p class="card-desc" data-i18n="skills.systems.desc">
-                熟练掌握现代软件工程规范、Git 协同流、全栈开发与环境容器化。
-              </p>
-              <div class="tags-cloud">
-                <span class="glass-tag">Git / GitHub Workflow</span>
-                <span class="glass-tag">RESTful API & Integration</span>
-                <span class="glass-tag">Linux / Shell</span>
-                <span class="glass-tag">DevOps & CI/CD</span>
-              </div>
-            </div>
+          <!-- Classified Card 2 -->
+          <div class="classified-ad-card">
+            <h3 class="ad-heading" data-i18n="ad2.title">【通告】系统工程与协同规范</h3>
+            <p class="ad-body" data-i18n="ad2.body">
+              遵循严谨软件工程规范，掌握现代协作工具流与持续交付体系，保障架构之稳固长青：
+            </p>
+            <ul class="ad-skills-list">
+              <li data-i18n="ad2.item1">Git 协同流水线与版本追溯</li>
+              <li data-i18n="ad2.item2">RESTful 接口契约与数据集成</li>
+              <li data-i18n="ad2.item3">Linux 环境运作与 Shell 自动化</li>
+              <li data-i18n="ad2.item4">DevOps 敏捷交付与自动化工作流</li>
+            </ul>
           </div>
 
-          <div class="glass-card col-span-4">
-            <div class="bento-content">
-              <h3 class="card-title" data-i18n="skills.ai.title">AI 探索与创新应用</h3>
-              <p class="card-desc" data-i18n="skills.ai.desc">
-                关注 LLM Agent 编排、Prompt 工程及智能开发辅助体系。
-              </p>
-              <div class="tags-cloud">
-                <span class="glass-tag">Prompt Engineering</span>
-                <span class="glass-tag">Agentic Workflows</span>
-                <span class="glass-tag">AI-Assisted Coding</span>
-              </div>
-            </div>
+          <!-- Classified Card 3 -->
+          <div class="classified-ad-card">
+            <h3 class="ad-heading" data-i18n="ad3.title">【招贴】智能探索与前沿应用</h3>
+            <p class="ad-body" data-i18n="ad3.body">
+              持续跟踪人工智能与自主智能体前沿进展，将前瞻科技切实落地于解决现实复杂问题：
+            </p>
+            <ul class="ad-skills-list">
+              <li data-i18n="ad3.item1">LLM 智能体编排与工作流协调</li>
+              <li data-i18n="ad3.item2">Prompt 架构工程与精准意图解析</li>
+              <li data-i18n="ad3.item3">AI 辅助工程化与智能化流水线</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-wrapper">
-      <div class="container">
-        <div class="contact-glass-banner">
-          <span class="section-tag" data-i18n="contact.tag">Get In Touch</span>
-          <h2 class="section-heading" style="margin-bottom: 14px;" data-i18n="contact.heading">建立连接，共创未来</h2>
-          <p class="hero-subtitle" style="margin-bottom: 24px;" data-i18n="contact.desc">
-            无论是项目合作、技术探讨，还是探索数字创新的新想法，随时欢迎交流。
+      <!-- Section: Telegraph Office (电报局与联络) -->
+      <section id="telegram" class="telegram-section">
+        <div class="telegram-card">
+          <h2 class="telegram-title" data-i18n="telegram.title">电报通信处 · 欢迎投递</h2>
+          <p class="telegram-content" data-i18n="telegram.desc">
+            阁下如有项目合作之意向、技术工程之探讨，或愿就数字创新交换见解，本报通信处随时恭候您的来函与电报联络。
           </p>
 
-          <div class="social-links-row">
-            <a href="https://github.com/Arnold3395" target="_blank" rel="noopener noreferrer" class="social-glass-pill">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <div class="telegram-actions">
+            <a href="https://github.com/Arnold3395" target="_blank" rel="noopener noreferrer" class="vintage-action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
-              <span data-i18n="contact.btn.github">GitHub 个人主页</span>
+              <span data-i18n="telegram.btn.github">查阅 GITHUB 档案库</span>
             </a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-text">
-        &copy; <span id="current-year">2026</span> Arnold (李东启). <span data-i18n="footer.rights">保留所有权利。</span>
-      </p>
-      <p style="font-size: 0.75rem; color: var(--text-tertiary);">
-        Crafted with 2026 Liquid Glass & VisionOS Aesthetics
-      </p>
-    </div>
-  </footer>
+    <!-- Newspaper Colophon / Imprint (报尾与版权章) -->
+    <footer class="newspaper-colophon">
+      <div class="colophon-ornament">❖ &nbsp; ❖ &nbsp; ❖</div>
+      <p data-i18n="colophon.imprint">本纪事报由 Arnold (李东启) 监制并排印发行 · 深圳 · 赛博空间</p>
+      <p data-i18n="colophon.rights">保留所有权利 · 基于经典新闻报纸排印美学构建</p>
+    </footer>
+
+  </div>
 
   <script src="js/main.js"></script>
 </body>
