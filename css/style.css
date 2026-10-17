@@ -670,7 +670,7 @@ body {
 }
 
 .telegram-card::after {
-  content: "CONFIDENTIAL / 航空快信";
+  content: "CONNECT / 开放交流";
   position: absolute;
   top: 14px;
   right: 18px;
